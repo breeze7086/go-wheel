@@ -26,7 +26,7 @@ func (s Slice[T]) Index(val T) int {
 func (s Slice[T]) Remove(val T) Slice[T] {
 	idx := s.Index(val)
 	if idx == -1 {
-		return s // 没找到，原样返回
+		return s
 	}
 	return append(s[:idx], s[idx+1:]...)
 }
